@@ -16,7 +16,7 @@ function App() {
 
   function onDataChange(event) {
     setData((prevData) => {
-      return { ...prevData, [event.target.name]: event.target.value } 
+      return { ...prevData, [event.target.name]: +event.target.value } 
     })
   }
 

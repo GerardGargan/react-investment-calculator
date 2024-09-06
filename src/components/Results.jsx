@@ -1,8 +1,9 @@
 import { calculateInvestmentResults, formatter } from '../util/investment';
 
 export default function Results({ data }) {
-    const { initialInvestment, annualInvestment, expectedReturn, duration } = data;
-    const result = calculateInvestmentResults({ initialInvestment, annualInvestment, expectedReturn, duration });
+    console.log(data);
+    const result = calculateInvestmentResults(data);
+    console.log(result);
     return (
         <table>
             <thead>
