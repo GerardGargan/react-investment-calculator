@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Results from './components/Results';
 
 import { useState } from 'react';
 import UserInput from './components/UserInput';
@@ -23,6 +24,7 @@ function App() {
       <>
         <Header title={"Investment Calculator"} />
         <UserInput data={data} onDataChange={onDataChange} />
+        <Results data={data} />
       </>
     )
 }
