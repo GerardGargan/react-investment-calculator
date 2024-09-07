@@ -4,4 +4,4 @@ A practice project I completed to practice some react concepts such as state man
 
 ### Demo GIF
 
-[Demo](./public/investment-calc-demo.gif)
+![Demo](./public/investment-calc-demo.gif)
