@@ -14,6 +14,8 @@ const initialData = {
 function App() {
   const [ data, setData ] = useState(initialData);
 
+  const inputIsValid = data.duration > 0;
+
   function onDataChange(event) {
     setData((prevData) => {
       return { ...prevData, [event.target.name]: +event.target.value } 
@@ -24,7 +26,8 @@ function App() {
       <>
         <Header title={"Investment Calculator"} />
         <UserInput data={data} onDataChange={onDataChange} />
-        <Results data={data} />
+        {!inputIsValid && <p className="center">Please enter a duration greater than zero.</p>}
+        {inputIsValid && <Results data={data} />}
       </>
     )
 }
